@@ -1,3 +1,4 @@
+
 module Mutations
   class CreateUser < BaseMutation 
     class AuthProviderSignUpData < Types::BaseInputObject
@@ -10,6 +11,7 @@ module Mutations
     type Types::UserType
 
     def resolve(name: nil, auth_provider: nil)
+      # &.[](:email) == [:email]
       User.create!(
         name: name,
         email: auth_provider&.[](:email)&.[](:email),
