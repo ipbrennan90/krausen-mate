@@ -27,6 +27,8 @@ gem 'jbuilder', '~> 2.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
+# Weight conversions (thanks shopify)
+gem 'measured'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -65,3 +67,5 @@ gem 'graphql-query-resolver'
 gem 'search_object'
 
 gem 'search_object_graphql'
+
+gem 'rspec'

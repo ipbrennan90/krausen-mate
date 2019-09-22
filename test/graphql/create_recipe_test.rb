@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'byebug'
 
 class Mutations::CreateRecipeTest < ActiveSupport::TestCase
   def perform(args = {})
