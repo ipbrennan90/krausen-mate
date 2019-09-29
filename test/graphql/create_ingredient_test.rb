@@ -26,7 +26,7 @@ class Mutations::CreateIngredientTest < ActiveSupport::TestCase
       name: "Cascade Hops",
       amount: 1.5,
       unit: "g",
-      recipe_id: recipe.id
+      recipe: recipe
     )
 
     assert result.persisted?
@@ -52,7 +52,7 @@ class Mutations::CreateIngredientTest < ActiveSupport::TestCase
         name: "",
         amount: 1.5,
         unit: "g",
-        recipe_id: recipe.id
+        recipe: recipe
       )
     end
 
@@ -67,7 +67,7 @@ class Mutations::CreateIngredientTest < ActiveSupport::TestCase
       perform(
         name: "Cascade Hops",
         unit: "g",
-        recipe_id: recipe.id
+        recipe: recipe
       )
     end
 
@@ -82,7 +82,7 @@ class Mutations::CreateIngredientTest < ActiveSupport::TestCase
       perform(
         name: "Cascade Hops",
         amount: 1.5,
-        recipe_id: recipe.id
+        recipe: recipe
       )
     end
 

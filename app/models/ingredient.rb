@@ -4,4 +4,6 @@ class Ingredient < ApplicationRecord
   belongs_to :parent, :class_name => "Ingredient", foreign_key: 'parent_id', optional: true
 
   belongs_to :recipe
+
+  has_many :notes, as: :note_subject, dependent: :destroy
 end
