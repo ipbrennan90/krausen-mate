@@ -2,17 +2,17 @@ module Mutations
   class CreateIngredient < AuthenticatedMutation
     argument :name, String, required: true
     argument :amount, Float, required: true
-    argument :recipe_id, Integer, required: true
+    argument :recipe_id, ID, required: true, loads: Types::RecipeType
     argument :unit, String, required: true
 
     type Types::IngredientType
 
-    def resolve(name: nil, recipe_id: nil, amount: nil, unit: nil)
+    def resolve(name: nil, amount: nil, unit: nil, recipe:)
       ingredient = Ingredient.new(
         name: name,
         amount: amount,
         unit: unit,
-        recipe: Recipe.find(recipe_id)
+        recipe: recipe
       )
       if ingredient.save
         ingredient
