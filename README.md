@@ -1,24 +1,14 @@
-# README
+# Getting Started
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
 
-Things you may want to cover:
+- `bin/setup`
 
-- Ruby version
+## Testing
 
-- System dependencies
+- `bin/rails test`
 
-- Configuration
+## Start The Server
 
-- Database creation
-
-- Database initialization
-
-- How to run the test suite
-
-- Services (job queues, cache servers, search engines, etc.)
-
-- Deployment instructions
-
-- ...
+- `bin/rails s`
+- visit localhost:3000/graphiql for the GraphQL console
