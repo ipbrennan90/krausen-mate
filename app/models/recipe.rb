@@ -5,4 +5,5 @@ class Recipe < ApplicationRecord
 
   has_many :notes, as: :note_subject, dependent: :destroy
   has_many :ingredients
+  has_many :steps
 end
